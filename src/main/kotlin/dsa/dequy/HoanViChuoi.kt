@@ -34,7 +34,7 @@ fun printPermutationsHelper(chars: CharArray, index: Int) {
 
 // 3. The Main Wrapper Function (The "Manager")
 fun printPermutations(str: String) {
-    print("Cac hoan vi cua \"$str\": ")
+    print("Các hoán vị của \"$str\": ")
 
     val chars = str.toCharArray()
 
