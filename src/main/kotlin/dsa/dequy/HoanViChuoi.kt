@@ -1,14 +1,10 @@
 package org.example.dsa.dequy
 
+import org.example.dsa.swap
+
 
 // input : abc
 // output : abc, acb, bac, bca, cab, cba
-
-fun CharArray.swap(i: Int, j: Int) {
-    val temp = this[i]
-    this[i] = this[j]
-    this[j] = temp
-}
 
 fun printPermutationsHelper(chars: CharArray, index: Int) {
     // Dieu kien dung (Base Case)
