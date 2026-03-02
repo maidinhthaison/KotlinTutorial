@@ -1,7 +1,7 @@
 # KotlinTutorial
 
 ## DSA
-
+#### https://docs.google.com/document/d/1ZEMh7t0_gFUJCQlgTqkYHbRG3XrsuiPybbWKHSbsDko/edit?fbclid=IwY2xjawP8LfpleHRuA2FlbQIxMABicmlkETFLMmlYakJqeDVaTnV2Zk9Fc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHmG5E5zCD8Xsm1Fzx0Il6sEuMR-EB-JhEpwUbM7vTpUEqY5rxd2KUMB9_hIj_aem_NIOOOg_dGGiAtiZ7ip5kEA&tab=t.0#heading=h.iitw6rjoo3tz
 ### Tìm kiếm tuần tự 
 - Vét cạn từ đầu mảng đến cuối mảng
 - Độ phức tạp O(1) : tốt nhất, O(n): trung bình/xấu nhất
@@ -36,3 +36,26 @@ từ phần chưa sắp xếp chèn vào đúng vị trí trong phần tử đã
 - Xấu nhất: O(n2) mảng sắp xếp ngược
 - Bộ nhớ: O(1)
 - Tính ổn định: Có (stable)
+### Quick Sort
+📈 Phân tích độ phức tạp:
+Thời gian:
+- Tốt nhất: O(n log n) - pivot luôn chia đôi mảng
+- Trung bình: O(n log n) - pivot chia mảng không quá lệch
+- Xấu nhất: O(n²) - pivot luôn là min hoặc max
+
+Trường hợp xấu nhất xảy ra khi:
+- Mảng đã sắp xếp + pivot = phần tử cuối
+- Mảng sắp xếp ngược + pivot = phần tử cuối
+- Tất cả phần tử đều bằng nhau
+- Bộ nhớ: O(log n) - cho stack đệ quy (trung bình)
+- Tính ổn định: ❌ Unstable
+
+✅ Ưu điểm:
+- ⚡ Rất nhanh trong thực tế: Hằng số ẩn nhỏ
+- 🏠 In-place: Sắp xếp tại chỗ, tiết kiệm bộ nhớ
+- 📱 Cache-friendly: Truy cập bộ nhớ hiệu quả
+- 🎯 Flexible: Nhiều cách tối ưu pivot
+- ❌ Nhược điểm:
+- 📉 Worst case O(n²): Có thể chậm với dữ liệu đặc biệt
+- ⚖️ Không ổn định: Thay đổi thứ tự phần tử bằng nhau
+- 🎲 Hiệu suất phụ thuộc pivot: Chọn pivot kém → hiệu suất kém
