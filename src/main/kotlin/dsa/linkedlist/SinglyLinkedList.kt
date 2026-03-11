@@ -1,4 +1,6 @@
-package org.example.dsa
+package org.example.dsa.linkedlist
+
+
 
 class Node(var value: Int){
     var next: Node? = null
