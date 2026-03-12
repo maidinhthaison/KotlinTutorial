@@ -11,7 +11,7 @@ package org.example.dsa.tree
  * Root -> Left -> Right
  */
 
-fun preorderTraversal(node: TreeNode?) {
+fun preorderTraversal(node: BinaryTreeNode?) {
     if (node == null) return
     print("${node.value} ") // 1. Process ROOT
     preorderTraversal(node.left) // 2. Go Left
@@ -22,7 +22,7 @@ fun preorderTraversal(node: TreeNode?) {
  * Use Case: If you do this on a Binary Search Tree (BST), it returns the elements in perfectly sorted, ascending order!
  * Left -> Root -> Right
  */
-fun inorderTraversal(node: TreeNode?) { // Left -> Root -> Right
+fun inorderTraversal(node: BinaryTreeNode?) { // Left -> Root -> Right
     if (node == null) return
     inorderTraversal(node.left) // 1. Go left
     print("${node.value} ") // 2. Process Root
@@ -32,7 +32,7 @@ fun inorderTraversal(node: TreeNode?) { // Left -> Root -> Right
  * Use Case: Deleting a tree. You must delete the children (leaves) before you can delete the parent root.
  * Left -> Right -> Root
  */
-fun postorderTraversal(node: TreeNode?) {
+fun postorderTraversal(node: BinaryTreeNode?) {
     if (node == null) return
     postorderTraversal(node.left) // 1. Go Left
     postorderTraversal(node.right) // 2. Go Right
@@ -41,24 +41,16 @@ fun postorderTraversal(node: TreeNode?) {
 
 fun main(){
     /* Let's build this tree:
-             F
+             50
            /   \
-          B     G
+          60     40
          / \     \
-        A   D     I
+        70   80   55
            / \   /
-          C   E H
+          20   15 65
     */
-    val root = TreeNode('F')
-    root.left = TreeNode('B')
-    root.right = TreeNode('G')
-    root.left!!.left = TreeNode('A')
-    root.left!!.right = TreeNode('D')
-    root.left!!.right!!.left = TreeNode('C')
-    root.left!!.right!!.right = TreeNode('E')
-    root.right!!.right = TreeNode('I')
-    root.right!!.right!!.left = TreeNode('H')
 
+    val root = createBinaryTree()
     println("DFS Preorder Traversal Root -> Left -> Right ")
     preorderTraversal(root)
     println()
