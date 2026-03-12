@@ -6,7 +6,7 @@ import kotlin.system.exitProcess
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     var choose : Boolean = false
-    val actions = arrayOf("Loops", "When", "Array", "Functions")
+    val actions = arrayOf("Loops", "When", "Array", "Functions", "OOP", "AbstractClass", "Singleton", "Factory")
     do {
         println("----------Application----------")
         actions.forEachIndexed { index, value ->
@@ -31,6 +31,24 @@ fun main() {
             "4" -> {
                 val functions = Functions()
                 functions.main()
+            }
+            "5" -> {
+                val oops = OOP()
+                oops.main()
+            }
+            "6" -> {
+                val abstractClass = AbstractClass()
+                abstractClass.main()
+            }
+            "7" -> {
+                ObjectSingleton.doSomething()
+                val singleton = ObjectSingleton()
+
+                singleton.main()
+            }
+            "8" -> {
+                val factory = FactoryPattern()
+                factory.main()
             }else -> {
                 println("Exit!")
                 choose = true
