@@ -18,6 +18,8 @@ class Arrays {
             print("${array[i]} ")
         }
         print("\n")
-        array.forEachIndexed { index, value -> print("($index - $value)") }
+        array.forEachIndexed { index, value ->
+            print("($index - $value)")
+        }
     }
 }
